@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  text-align: center;
+  background-color: rgb(248, 242, 242);
+}
+.cover {
+  padding-top: 40px;
+  background-color: indianred;
+  height: auto;
+  width: 100%;
+}
+header {
+  background-color: white;
+  padding: 20px;
+  color: indianred;
+  text-align: center;
+  height: 50px;
+  padding-bottom: 60px;
+}
+.information{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.information div{
+  padding: 30px;
+  margin: 20px;
+  border-radius: 10px;
+}
+.information span{
+  font-size: 20px;
+}
+ul li {
+  list-style-type: none;
+  display: inline;
+}
+.submit {
+  width: 30%;
+  border: none;
+}
+img {
+  width: 100%;
+  border-radius: 10%;
+}
+input {
+  width: 60%;
+  padding: 10px;
+  background-color: white;
+  color: indianred;
+  border: 1px solid #ccc;
+}
+.text {
+  margin: 50px;
+  border-radius: 10px;
+  padding: 20px;
+}
+.text span {
+  font-size: 20px;
+}
+footer{
+  text-align: center;
+  background-color: indianred;
+  color: white;
+  padding: 30px;
+}
+footer i{
+  padding: 20px;
+}
+hr{
+  background-color: white;
+}
+@media (max-width: 900px) {
+  input {
+    width: 90%;
+  }
+  .row{
+    margin-right: 0;
+    margin-left: 0;
+  }
+  
+}
+@media (max-width: 500px){
+  .text{
+    margin: 20px;
+  }
+}
