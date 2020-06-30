@@ -20,8 +20,7 @@
     </header>
     <main>
       <div class="cover">
-        
-        <h3 id="heading" style="text-align: center; color: white;" ></h3>
+        <h3 id="heading" style="text-align: center; color: white;"></h3>
 
         <div class="row information">
           <div class="col-lg-3 bg-white card">
@@ -81,51 +80,29 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
       fetch("https://api.covid19api.com/summary")
-  .then((response) => response.json())
-  .then((data) => {
-    document.getElementById('heading').innerHTML = "Global Updates ";
-    document.getElementById("output1").innerHTML =
-      "New Confirmed " + data.Global.NewConfirmed;
-    document.getElementById("output2").innerHTML =
-      "Total Confirmed " + data.Global.TotalConfirmed;
-    document.getElementById("output3").innerHTML =
-      "New Deaths " + data.Global.NewDeaths;
-    document.getElementById("output4").innerHTML =
-      "Total Deaths " + data.Global.TotalDeaths;
-    document.getElementById("output5").innerHTML =
-      "New Recovered " + data.Global.NewRecovered;
-    document.getElementById("output6").innerHTML =
-      "Total Recovered " + data.Global.TotalRecovered;
-  });
-  items: []
-  function addCountries(){
-  fetch('https://api.covid19api.com/summary')
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data.Countries);
-      let output = '<h2>data</h2>';
-      data.Countries.foreach(function (data){
-        output += `
+        .then((response) => response.json())
+        .then((data) => {
+          document.getElementById("heading").innerHTML = "Global Updates ";
+          document.getElementById("output1").innerHTML =
+            "New Confirmed " + data.Global.NewConfirmed;
+          document.getElementById("output2").innerHTML =
+            "Total Confirmed " + data.Global.TotalConfirmed;
+          document.getElementById("output3").innerHTML =
+            "New Deaths " + data.Global.NewDeaths;
+          document.getElementById("output4").innerHTML =
+            "Total Deaths " + data.Global.TotalDeaths;
+          document.getElementById("output5").innerHTML =
+            "New Recovered " + data.Global.NewRecovered;
+          document.getElementById("output6").innerHTML =
+            "Total Recovered " + data.Global.TotalRecovered;
+        });
+
+      fetch("https://api.covid19api.com/summary")
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data.Countries);
+        });
         
-        <div>
-          <h3>${data.Countries.country}</h3>
-        </div>
-        
-        
-        
-        
-        `
-      })
-      console.log(data);
-
-
-
-
-
-
-    });
-
-}
     </script>
   </body>
 </html>
