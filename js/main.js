@@ -55,12 +55,10 @@ fetch("https://api.covid19api.com/summary")
 
                 var select = document.getElementById('select');
                 select.append(span)
-
-                
-
-            }else{
-
             }
+            input.addEventListener('change', () =>{
+              span.innerHTML = '';
+            })
         })
         });
         document.getElementById('demo').innerHTML = demo;
