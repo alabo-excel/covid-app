@@ -1,108 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CovidApp</title>
-    <link rel="stylesheet" href="./css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./css/update.css" />
-    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css" />
-  </head>
 
-  <body>
-    <header class="col-12">
-      <ul>
-        <li>
-          <h4>CovidApp</h4>
-        </li>
-        <li></li>
-      </ul>
-    </header>
-    <main>
-      <div class="cover">
-        <h3 id="heading" style="text-align: center; color: white;"></h3>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CovidApp</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/update.css" />
+  <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css" />
+</head>
 
-        <div class="row information">
-          <div class="col-lg-3 bg-white card">
-            <span id="output1"> </span><br />
-            <span id="output2"></span>
-          </div>
-          <div class="col-lg-3 bg-white card">
-            <span id="output3"></span><br />
-            <span id="output4"></span>
-          </div>
-          <div class="col-lg-3 bg-white card">
-            <span id="output5"></span><br />
-            <span id="output6"></span>
-          </div>
-        </div>
+<body>
+  <header class="col-12">
+    <ul>
+      <li>
+        <h4>CovidApp</h4>
+      </li>
+      <li></li>
+    </ul>
+  </header>
+  <main>
+    <div class="cover">
+      <h3 id="heading" style="text-align: center; color: white;"></h3>
 
-        <div id="output"></div>
-      </div>
-      <div class="row">
-        <div class="col-lg-2 col-sm-10 text card">
-          <img src="./img/002.jpg" alt="" /><br /><br />
-          <span
-            >Wash your hands with soap under running water for at least 20
-            minutes</span
-          >
+      <div class="row information">
+        <div class="col-lg-3 bg-white card">
+          <span id="output1"> </span><br />
+          <span id="output2"></span>
         </div>
-
-        <div class="col-lg-2 col-sm-10 text card">
-          <img src="./img/004.jpeg" alt="" /><br /><br />
-          <span>Wear a face mask always in public places</span>
+        <div class="col-lg-3 bg-white card">
+          <span id="output3"></span><br />
+          <span id="output4"></span>
         </div>
-        <div class="col-lg-2 col-sm-10 text card">
-          <img src="./img/003.jpg" alt="" /><br /><br />
-          <span
-            >If you feel sick or unwell, stay at home to avoid spreading or
-            contacting the virus</span
-          >
-        </div>
-        <div class="col-lg-2 col-sm-10 text card">
-          <img src="./img/images (3).jpeg" alt="" /><br /><br />
-          <span>Together we can fight the coreonavirus pandemic for good.</span>
+        <div class="col-lg-3 bg-white card">
+          <span id="output5"></span><br />
+          <span id="output6"></span>
         </div>
       </div>
-    </main>
-    <div id="footer">
-      <footer>
-        <span>Stay Home Stay Safe</span>
-        <hr />
-        <i class="fa fa-facebook"></i>
-        <i class="fa fa-whatsapp"></i>
-        <i class="fa fa-twitter"></i>
-        <hr />
-        <span>Alabo Excel 2020</span>
-      </footer>
+      <div>
+        <input type="text" placeholder="Country name must start with a capital letter...." id="input"><input style="width: 80px;" id="btn" type="button" value="Search"><br>
+      </div><br>
+      <div id="select"></div><br>
+
+    <div id="demo">
+
     </div>
-    <script src="./js/main.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script>
-      fetch("https://api.covid19api.com/summary")
-        .then((response) => response.json())
-        .then((data) => {
-          document.getElementById("heading").innerHTML = "Global Updates ";
-          document.getElementById("output1").innerHTML =
-            "New Confirmed " + data.Global.NewConfirmed;
-          document.getElementById("output2").innerHTML =
-            "Total Confirmed " + data.Global.TotalConfirmed;
-          document.getElementById("output3").innerHTML =
-            "New Deaths " + data.Global.NewDeaths;
-          document.getElementById("output4").innerHTML =
-            "Total Deaths " + data.Global.TotalDeaths;
-          document.getElementById("output5").innerHTML =
-            "New Recovered " + data.Global.NewRecovered;
-          document.getElementById("output6").innerHTML =
-            "Total Recovered " + data.Global.TotalRecovered;
-        });
+      <div id="output"></div>
+    </div>
+    <div class="row">
+      <div class="col-lg-2 col-sm-10 text card">
+        <img src="./img/002.jpg" alt="" /><br /><br />
+        <span>Wash your hands with soap under running water for at least 20
+          minutes</span>
+      </div>
 
-      fetch("https://api.covid19api.com/summary")
-        .then((response) => response.json())
-        .then((data) => {
-          console.log(data.Countries);
-        });
-        
-    </script>
-  </body>
+      <div class="col-lg-2 col-sm-10 text card">
+        <img src="./img/004.jpeg" alt="" /><br /><br />
+        <span>Wear a face mask always in public places</span>
+      </div>
+      <div class="col-lg-2 col-sm-10 text card">
+        <img src="./img/003.jpg" alt="" /><br /><br />
+        <span>If you feel sick or unwell, stay at home to avoid spreading or
+          contacting the virus</span>
+      </div>
+      <div class="col-lg-2 col-sm-10 text card">
+        <img src="./img/images (3).jpeg" alt="" /><br /><br />
+        <span>Together we can fight the coreonavirus pandemic for good.</span>
+      </div>
+    </div>
+  </main>
+  <div id="footer">
+    <footer>
+      <span>Stay Home Stay Safe</span>
+      <hr />
+      <i class="fa fa-facebook"></i>
+      <i class="fa fa-whatsapp"></i>
+      <i class="fa fa-twitter"></i>
+      <hr />
+      <span>Alabo Excel 2020</span>
+    </footer>
+  </div>
+  <script src="./js/main.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</body>
+
 </html>
