@@ -42,15 +42,15 @@ fetch("https://api.covid19api.com/summary")
           btn.addEventListener('click', () =>{
             if(input.value === item.Country){
                 var i = item;
-                var span = document.createElement('span');
-                span.innerHTML = `Country ${item.Country}<br>
+                var span = document.createElement('section');
+                span.innerHTML = `<br><h3>Country ${item.Country}</h3>
                 New Confirmed ${item.NewConfirmed}<br>
                 New Deaths ${item.NewDeaths}<br>
                 New Recovered ${item.NewRecovered}<br>
 
                 Total Confirmed ${item.TotalConfirmed}<br>
                 Total Deaths ${item.TotalDeaths}<br>
-                Total Recovered ${item.TotalRecovered}    <br>            
+                Total Recovered ${item.TotalRecovered}  <br>  <br>            
                 `;
 
                 var select = document.getElementById('select');
